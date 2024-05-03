@@ -1,0 +1,13 @@
+def solution(num_list):
+    listLen = len(num_list);
+
+    if listLen >= 2 and listLen <= 10:
+        lastNum = num_list[listLen - 1];
+        beforeNum = num_list[listLen - 2];
+
+        if lastNum > beforeNum:
+            num_list.append(lastNum - beforeNum)
+        else:
+            num_list.append(lastNum * 2);
+
+    return num_list;
