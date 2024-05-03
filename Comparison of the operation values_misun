@@ -1,0 +1,8 @@
+def solution(a, b):
+    answer1 = 2 * int(a) * int(b)
+    answer2 = int(str(a) + str(b))
+    
+    if answer1 >= answer2:
+        return answer1
+    else:
+        return answer2
