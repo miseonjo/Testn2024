@@ -1,0 +1,16 @@
+def solution(numLog):
+    answer = ''
+    
+    for i in range(1, len(numLog)):
+        qq = numLog[i] - numLog[i - 1]
+
+        if qq == 1:
+            answer += "w"
+        elif qq == -1:
+            answer += "s"
+        elif qq == 10:
+            answer += "d"
+        elif qq == -10:
+            answer += "a"
+
+    return answer
