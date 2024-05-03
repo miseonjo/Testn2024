@@ -1,0 +1,14 @@
+def solution(num_list):
+    odd = ""  # 홀
+    even = ""  # 짝
+    
+    for num in num_list:
+        if num % 2 == 0:   # 짝수인 경우
+            even += str(num)   # num_list안에 있는 짝수 숫자를 순서대로 이어붙인다
+        else:   # 홀수인 경우
+            odd += str(num)   # num_list안에 있는 홀수 숫자를 순서대로 이어붙인다.
+        
+    odd_sum = int(odd)  # 문자열인 odd를 정수형으로 바꿈
+    even_sum = int(even)   # 문자열인 even을 정수형으로 바꿈
+    
+    return even_sum + odd_sum
