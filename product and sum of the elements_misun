@@ -1,0 +1,11 @@
+def solution(num_list):
+    a = 1
+    b = sum(num_list)   # 모든 원소들의 합
+    
+    for num in num_list:
+        a *= num   # 모든 원소들의 곱
+        
+    if a < b**2:
+        return 1
+    else:
+        return 0
