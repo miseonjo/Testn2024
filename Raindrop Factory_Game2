@@ -1,0 +1,30 @@
+raindrop factory_Game이어서 ->
+
+while 1:
+    clock.tick(60)
+    for event in pygame.event.get():
+      if event.type == pygame.QUIT:
+        sys.exit()
+    pressed_keys = pygame.key.get_pressed()
+
+    screen.fill((255,255,255))
+    mike.draw()
+    cloud.draw()
+    cloud.rain()
+    cloud.move()
+    i = 0
+    while i < len(raindrops):
+      raindrops[i].move()
+      raindrops[i].draw()
+      flag = False
+      if raindrops[i].off_screen():
+        flag = True
+      if mike.hit_by(raindrops[i]):
+        flag = True
+        last_hit_time = time.time()
+      if flag:
+        del raindrops[i]
+        i -= 1
+      i += 1
+
+pygame.display.update()
