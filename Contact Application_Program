@@ -1,0 +1,33 @@
+print('메뉴를 선택하세요')
+print('1: 추가')
+print('0: 종료')
+datalist = list()
+while True:
+
+	menu = int(input('메뉴선택: '))
+	if menu == 1:
+		name = input('이름')
+		tel = input('연락처: ')
+		email = input('email: ')
+		datalist.append((name, tel, email))
+		print(datalist)
+
+	elif menu == 0:
+		break
+	else:
+		print('입력오류')
+
+결과:
+메뉴를 선택하세요
+1. 추가
+0. 종료
+
+메뉴 선택: 1
+
+이름: 홍길동
+연락처: 010-0000-9999
+e-mail: hong@gmail.com
+
+[('홍길동', '010-0000-9999', 'hong@gmail.com')]
+
+메뉴선택: 0
